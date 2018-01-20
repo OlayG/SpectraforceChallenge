@@ -19,9 +19,18 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url "https://jitpack.io" }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+ext {
+    androidVersion = '26.1.0'
+    daggerVersion = '2.11'
+    butterknifeVersion = '8.8.1'
+    timberVersion = '4.5.1'
+    fancytoastVersion = '0.1.3'
 }
